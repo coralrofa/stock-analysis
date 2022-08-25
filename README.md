@@ -3,8 +3,7 @@
 ## Overview of Project
 A macro was set up using VBA to conduct performance evaluation for 12 clean energy company stocks to support portfolio diversification. The macro was further optimized by refactoring to increase processing speed. 
 
-### Purpose
-And background
+### Purpose and background
 A data base of 12 clean energy company stocks was provided by a finance major looking for an efficient way to compare the Total Daily Volume and Yearly Returns per stock during 2017 and 2018 to help guide his parents investments. 
 
 ## Results
@@ -13,10 +12,12 @@ The VBA code was expanded from an initial code set to evaluate the Total Daily V
 
 [Original VBA Code snippet: DAQO Stock Analysis] (DQAnalysis.png)
 
-![Original VBA Code: DAQO Stock Analysis] (Resources/DQAnalysis.png)
+![Original VBA Code: DAQO Stock Analysis] (https://github.com/coralrofa/stock-analysis/blob/dd7d79ac55cfb8e7104738ae165691783aec54a3/Resources/DQAnalysis.png)
  
 This initial code was expanded using an array of stock tickers (a) and a nested loop (b) with instructions to search through the data for each ticker and add the daily volume to obtain a Total Daily Volume, and to identify the first and last transaction per stock ticker to then calculate the Yearly Return. 
+
 [VBA Code snippet: All Stocks Analysis] (AllStockAnalysis.png)
+
 ![VBA Code snippet: All Stocks Analysis] (github address to image)
  
 
@@ -29,7 +30,6 @@ Also, the code was fitted with an input box to facilitate selection of the year 
 From here, the code was then refactored to increase processing speed. 
 
 #### Refactored Code
-
 Sub AllStocksAnalysisRefactored()
     Dim startTime As Double
     Dim endTime  As Double
