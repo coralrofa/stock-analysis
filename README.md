@@ -31,7 +31,7 @@ Also, the code was fitted with an input box to facilitate selection of the year 
 From here, the code was then refactored to increase processing speed. 
 
 #### Refactored Code
-Sub AllStocksAnalysisRefactored()
+  Sub AllStocksAnalysisRefactored()
     Dim startTime As Double
     Dim endTime  As Double
     
@@ -143,7 +143,7 @@ Sub AllStocksAnalysisRefactored()
  
     endTime = Timer
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
-	End Sub
+  End Sub
 
 
 To refactor the code:
