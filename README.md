@@ -11,7 +11,7 @@ A data base of 12 clean energy company stocks was provided by a finance major lo
 ### Code Optimization 
 The VBA code was expanded from an initial code set to evaluate the Total Daily Volume and Yearly Returns for a particular stock (DAQO). 
 [Original VBA Code snippet: DAQO Stock Analysis] (DQAnalysis.png)
-![Original VBA Code: DAQO Stock Analysis] (github address to image)
+![Original VBA Code: DAQO Stock Analysis] (Resources/DQAnalysis.png)
  
 This initial code was expanded using an array of stock tickers (a) and a nested loop (b) with instructions to search through the data for each ticker and add the daily volume to obtain a Total Daily Volume, and to identify the first and last transaction per stock ticker to then calculate the Yearly Return. 
 [VBA Code snippet: All Stocks Analysis] (AllStockAnalysis.png)
