@@ -91,30 +91,23 @@ Sub AllStocksAnalysisRefactored()
     
         '3a) Increase volume for current ticker
          If Cells(j, 1).Value = tickers(tickerIndex) Then
-         tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(j, 8).Value
+	         tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(j, 8).Value
+         End If
         
-        End If
-        '3b) Check if the current row is the first row with the selected tickerIndex.
-        'If  Then
-            If Cells(j - 1, 1).Value <> tickers(tickerIndex) And Cells(j, 1).Value = tickers(tickerIndex) Then
-
+	'3b) Check if the current row is the first row with the selected tickerIndex.
+         If Cells(j - 1, 1).Value <> tickers(tickerIndex) And Cells(j, 1).Value = tickers(tickerIndex) Then
                tickerStartingPrices(tickerIndex) = Cells(j, 6).Value
-            
-        End If
+         End If
         
         '3c) check if the current row is the last row with the selected ticker
-         'If the next row’s ticker doesn’t match, increase the tickerIndex.
-        'If  Then
-            
-             If Cells(j + 1, 1).Value <> tickers(tickerIndex) And Cells(j, 1).Value = tickers(tickerIndex) Then
-
-               tickerEndingPrices(tickerIndex) = Cells(j, 6).Value
-End If
+         	'If the next row’s ticker doesn’t match, increase the tickerIndex.
+         If Cells(j + 1, 1).Value <> tickers(tickerIndex) And Cells(j, 1).Value = tickers(tickerIndex) Then
+		tickerEndingPrices(tickerIndex) = Cells(j, 6).Value
+	 End If
             
             If Cells(j, 1).Value = tickers(tickerIndex) And Cells(j + 1, 1).Value <> tickers(tickerIndex) Then
             tickerIndex = tickerIndex + 1
-            
-        End If
+         End If
 
      Next j
     '4) Loop through your arrays to output the Ticker, Total Daily Volume, and Return.
@@ -141,27 +134,28 @@ End If
     For i = dataRowStart To dataRowEnd
         
         If Cells(i, 3) > 0 Then
-            
             Cells(i, 3).Interior.Color = vbGreen
-            
         Else
-        
-            Cells(i, 3).Interior.Color = vbRed
-            
+            Cells(i, 3).Interior.Color = vbRed  
         End If
         
     Next i
  
     endTime = Timer
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
-
 End Sub
 
+
 To refactor the code:
+
 (1) the code establishing the cells to loop over was set up before declaring the variable of interest (tickerIndex) to collect the required information.
+
 (2) The output variables were declared immediately after the ticker index. 
-(3) A loop was set to allow collection of output variable data immediately after ID of the ticker index instead of looping though all the array looking for each output variable data.  
+
+(3) A loop was set to allow collection of output variable data immediately after ID of the ticker index instead of looping though all the array looking for each output variable data.
+  
 (4) The original runtimes for the 2017 and 2018 stock data were 0.984375 and 0.96875 seconds respectively and was reduced to 0.21909375 and  0.19921875 respectively.
+
 (5) The results or the analysis were consistent before and after the refactoring.
  
   
