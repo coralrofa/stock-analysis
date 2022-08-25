@@ -10,6 +10,7 @@ A data base of 12 clean energy company stocks was provided by a finance major lo
 ## Results
 ### Code Optimization 
 The VBA code was expanded from an initial code set to evaluate the Total Daily Volume and Yearly Returns for a particular stock (DAQO). 
+
 [Original VBA Code snippet: DAQO Stock Analysis] (DQAnalysis.png)
 ![Original VBA Code: DAQO Stock Analysis] (Resources/DQAnalysis.png)
  
@@ -27,6 +28,7 @@ Also, the code was fitted with an input box to facilitate selection of the year 
 From here, the code was then refactored to increase processing speed. 
 
 #### Refactored Code
+
 Sub AllStocksAnalysisRefactored()
     Dim startTime As Double
     Dim endTime  As Double
