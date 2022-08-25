@@ -12,7 +12,7 @@ The VBA code was expanded from an initial code set to evaluate the Total Daily V
 
 [Original VBA Code snippet: DAQO Stock Analysis] (DQAnalysis.png)
 
-![Original VBA Code: DAQO Stock Analysis] (https://github.com/coralrofa/stock-analysis/blob/dd7d79ac55cfb8e7104738ae165691783aec54a3/Resources/DQAnalysis.png)
+![Original VBA Code: DAQO Stock Analysis] (Resources/DQAnalysis.png)
  
 This initial code was expanded using an array of stock tickers (a) and a nested loop (b) with instructions to search through the data for each ticker and add the daily volume to obtain a Total Daily Volume, and to identify the first and last transaction per stock ticker to then calculate the Yearly Return. 
 
