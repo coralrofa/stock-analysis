@@ -16,15 +16,15 @@ The VBA code was expanded from an initial code set to evaluate the Total Daily V
  
 This initial code was expanded using an array of stock tickers (a) and a nested loop (b) with instructions to search through the data for each ticker and add the daily volume to obtain a Total Daily Volume, and to identify the first and last transaction per stock ticker to then calculate the Yearly Return. 
 
-[VBA Code snippet: All Stocks Analysis] (AllStockAnalysis.png)
+[VBA Code snippet: All Stocks Analysis](Resources/AllStockAnalysis.png)
 
-![VBA Code snippet: All Stocks Analysis] (github address to image)
+![VBA Code snippet: All Stocks Analysis](https://github.com/coralrofa/stock-analysis/blob/main/Resources/AllStockAnalysis.png)
  
 
 Also, the code was fitted with an input box to facilitate selection of the year of interest, a tabulated output format to visualize the data once the analysis is completed and a message box to display the time in seconds the analysis took. The original runtimes for the 2017 and 2018 stock data were 0.96875 and 0.828125 seconds respectively
  
-[Input Box] (InputBox.PNG)
-![ Input Box](github address to image)
+[Input Box](Resources/InputBox.png)
+![Input Box](https://github.com/coralrofa/stock-analysis/blob/main/Resources/InputBox.PNG)
 
 
 From here, the code was then refactored to increase processing speed. 
@@ -159,32 +159,33 @@ End Sub
 
 To refactor the code:
 (1) the code establishing the cells to loop over was set up before declaring the variable of interest (tickerIndex) to collect the required information.
- (2) The output variables were declared immediately after the ticker index. 
+(2) The output variables were declared immediately after the ticker index. 
 (3) A loop was set to allow collection of output variable data immediately after ID of the ticker index instead of looping though all the array looking for each output variable data.  
-(4) performance analysis was consistent 
-The original runtimes for the 2017 and 2018 stock data were 0.984375 and 0.96875 seconds respectively and was reduced to 0.21909375 and  0.19921875 respectively
+(4) The original runtimes for the 2017 and 2018 stock data were 0.984375 and 0.96875 seconds respectively and was reduced to 0.21909375 and  0.19921875 respectively.
+(5) The results or the analysis were consistent before and after the refactoring.
  
   
-[2017 Analysis Original] (2017_AnalysisOriginal.png)
-![2017 Analysis Original] (github address to image)
-[2018 Analysis Original] (2018_AnalysisOriginal.png)
-![2018 Analysis Original] (github address to image)
+[2017 Analysis Original](Resources/2017_AnalysisOriginal.png)
+![2017 Analysis Original](https://github.com/coralrofa/stock-analysis/blob/main/Resources/2017_AnalysisOriginal.PNG)
+
+[2018 Analysis Original](Resources/2018_AnalysisOriginal.png)
+![2018 Analysis Original](https://github.com/coralrofa/stock-analysis/blob/main/Resources/2018_AnalysisOriginal.PNG)
 
   
-[VBA Challenge 2017] (VBA_Challenge_2017.png)
-![ VBA Challenge 2017](github address to image)
+[VBA Challenge 2017](Resource/VBA_Challenge_2017.png)
+![VBA Challenge 2017](https://github.com/coralrofa/stock-analysis/blob/main/Resources/VBA_Challenge_2017.PNG)
 
-[VBA Challenge 2018] (VBA_Challenge_2018.png)
-![ VBA Challenge 2018](github address to image)
+[VBA Challenge 2018](Resource/VBA_Challenge_2018.png)
+![VBA Challenge 2018](https://github.com/coralrofa/stock-analysis/blob/main/Resources/VBA_Challenge_2018%20.PNG)
 
 
 ### Stock Performance 
 From the analysis conducted, it was identified that all stocks except TERP performed well during 2017 and all stocks except ENPH and RUN underperformed during 2018. Only once stock, ENPH, performed well during 2017 and 2018 suggesting it could be a good investment opportunity
 
-[2017 Analysis Refactored] (2017_AnalysisRefactored.PNG)
-![ 2017 Analysis Refactored] (github address to image)
-[2018 Analysis Refactored] (2018_AnalysisRefactored.PNG)
-![ 2018 Analysis Refactored] (github address to image)
+[2017 Analysis Refactored](Resource/2017_AnalysisRefactored.PNG)
+![2017 Analysis Refactored](https://github.com/coralrofa/stock-analysis/blob/main/Resources/2017_AnalysisRefactored.PNG)
+[2018 Analysis Refactored](Resource/2018_AnalysisRefactored.PNG)
+![2018 Analysis Refactored](https://github.com/coralrofa/stock-analysis/blob/main/Resources/2018_AnalysisRefactored..PNG)
 
    
 ## Summary
