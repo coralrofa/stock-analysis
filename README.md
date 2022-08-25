@@ -24,6 +24,7 @@ This initial code was expanded using an array of stock tickers (a) and a nested 
 Also, the code was fitted with an input box to facilitate selection of the year of interest, a tabulated output format to visualize the data once the analysis is completed and a message box to display the time in seconds the analysis took. The original runtimes for the 2017 and 2018 stock data were 0.96875 and 0.828125 seconds respectively
  
 [Input Box](Resources/InputBox.png)
+
 ![Input Box](https://github.com/coralrofa/stock-analysis/blob/main/Resources/InputBox.PNG)
 
 
@@ -109,8 +110,7 @@ Sub AllStocksAnalysisRefactored()
 
                tickerEndingPrices(tickerIndex) = Cells(j, 6).Value
 End If
-            'https://stackoverflow.com/questions/66945076/why-am-i-getting-subscript-out-of-range-error-on-vba
-            '3d Increase the tickerIndex.
+            
             If Cells(j, 1).Value = tickers(tickerIndex) And Cells(j + 1, 1).Value <> tickers(tickerIndex) Then
             tickerIndex = tickerIndex + 1
             
@@ -166,16 +166,20 @@ To refactor the code:
  
   
 [2017 Analysis Original](Resources/2017_AnalysisOriginal.png)
+
 ![2017 Analysis Original](https://github.com/coralrofa/stock-analysis/blob/main/Resources/2017_AnalysisOriginal.PNG)
 
 [2018 Analysis Original](Resources/2018_AnalysisOriginal.png)
+
 ![2018 Analysis Original](https://github.com/coralrofa/stock-analysis/blob/main/Resources/2018_AnalysisOriginal.PNG)
 
   
 [VBA Challenge 2017](Resource/VBA_Challenge_2017.png)
+
 ![VBA Challenge 2017](https://github.com/coralrofa/stock-analysis/blob/main/Resources/VBA_Challenge_2017.PNG)
 
 [VBA Challenge 2018](Resource/VBA_Challenge_2018.png)
+
 ![VBA Challenge 2018](https://github.com/coralrofa/stock-analysis/blob/main/Resources/VBA_Challenge_2018%20.PNG)
 
 
@@ -183,8 +187,11 @@ To refactor the code:
 From the analysis conducted, it was identified that all stocks except TERP performed well during 2017 and all stocks except ENPH and RUN underperformed during 2018. Only once stock, ENPH, performed well during 2017 and 2018 suggesting it could be a good investment opportunity
 
 [2017 Analysis Refactored](Resource/2017_AnalysisRefactored.PNG)
+
 ![2017 Analysis Refactored](https://github.com/coralrofa/stock-analysis/blob/main/Resources/2017_AnalysisRefactored.PNG)
+
 [2018 Analysis Refactored](Resource/2018_AnalysisRefactored.PNG)
+
 ![2018 Analysis Refactored](https://github.com/coralrofa/stock-analysis/blob/main/Resources/2018_AnalysisRefactored..PNG)
 
    
